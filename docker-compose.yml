@@ -1,0 +1,10 @@
+services:
+  frontend:
+    image: frontend
+    container_name: frontend-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:80"
+    restart: unless-stopped
